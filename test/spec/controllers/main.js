@@ -3,42 +3,20 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('demoApp'));
+  beforeEach(module('blogthingyApp'));
 
-  var scope,
-    controller,
-    $httpBackend;
+  var MainCtrl,
+    scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope, _$httpBackend_) {
-    
+  beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    $httpBackend = _$httpBackend_;
-    controller = $controller;
-
-    $httpBackend.when('GET','/awesomethings').respond([
-      { id: 1, name: 'one' },
-      { id: 2, name: 'two' },
-      { id: 3, name: 'three' },
-      { id: 4, name: 'four' },
-      { id: 5, name: 'five'} ]);
-  
-  }));
-
-  afterEach(function() {
-     $httpBackend.verifyNoOutstandingExpectation();
-     $httpBackend.verifyNoOutstandingRequest();
-   });
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    $httpBackend.expectGET('/awesomethings');
-   
-    var MainCtrl = controller('MainCtrl', {
+    MainCtrl = $controller('MainCtrl', {
       $scope: scope
     });
+  }));
 
-    $httpBackend.flush();
-    expect(scope.awesomeThings.length).toBe(5);
+  it('should attach a list of awesomeThings to the scope', function () {
+    expect(scope.awesomeThings.length).toBe(3);
   });
-
 });

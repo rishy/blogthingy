@@ -1,7 +1,12 @@
 'use strict';
 
-angular.module('demoApp', ['restangular'])
-  .config(function ($routeProvider, RestangularProvider) {
+angular.module('blogthingyApp', [
+  'ngCookies',
+  'ngResource',
+  'ngSanitize',
+  'ngRoute'
+])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -10,5 +15,4 @@ angular.module('demoApp', ['restangular'])
       .otherwise({
         redirectTo: '/'
       });
-      RestangularProvider.setBaseUrl('');
   });
