@@ -38,16 +38,20 @@ module.exports = function (grunt) {
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
-      },
+      },      
       gruntfile: {
         files: ['Gruntfile.js']
+      },
+      jade: {
+        files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        tasks: ['jade']
       },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '.tmp/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '.tmp/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -87,6 +91,22 @@ module.exports = function (grunt) {
           base: '<%= yeoman.dist %>'
         }
       }
+    },
+
+    //converts jade files to html
+    jade: {
+      compile: {
+       options: {
+       data: {}
+     },
+       files: [{
+        expand: true,
+        cwd:'<%= yeoman.app %>',
+        src: ['*.jade', 'views/{,*/}*.jade'],
+        dest: '.tmp',
+        ext: '.html'
+      }]
+     }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -133,7 +153,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     'bower-install': {
       app: {
-        html: '<%= yeoman.app %>/index.html',
+        html: '<%= yeoman.app %>/index.jade',
         ignorePath: '<%= yeoman.app %>/'
       }
     },
@@ -185,7 +205,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: '.tmp/index.html',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -231,7 +251,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>',
+          cwd: '.tmp',
           src: ['*.html', 'views/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
@@ -293,6 +313,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'jade',
         'coffee:dist',
         'copy:styles'
       ],
