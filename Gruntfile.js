@@ -36,8 +36,8 @@ module.exports = function (grunt) {
         tasks: ['newer:coffee:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.styl'],
+        tasks: ['stylus','newer:copy:styles', 'autoprefixer']
       },      
       gruntfile: {
         files: ['Gruntfile.js']
@@ -107,6 +107,23 @@ module.exports = function (grunt) {
         ext: '.html'
       }]
      }
+    },
+
+    //converts stylus files to css
+    stylus: {
+      compile: {
+        options: {
+          linenos: true,
+          compress: false
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>',
+          src: ['styles/stylus/*.styl'],
+          dest: '.tmp',
+          ext: '.css'   
+        }]
+      }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -313,8 +330,9 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'jade',
+        'jade',        
         'coffee:dist',
+        'stylus',
         'copy:styles'
       ],
       test: [
@@ -332,16 +350,16 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= yeoman.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+     cssmin: {
+        dist: {
+         files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+             '.tmp/styles/{,*/}*.css',
+             '<%= yeoman.app %>/styles/{,*/}*.css'
+           ]
+         }
+        }
+      },
     // uglify: {
     //   dist: {
     //     files: {
@@ -395,9 +413,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'jade',
     'bower-install',
     'useminPrepare',
     'concurrent:dist',
+    'stylus',
     'autoprefixer',
     'concat',
     'ngmin',
