@@ -222,7 +222,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '.tmp/index.html',
+      html: 'app/index.jade',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -350,16 +350,16 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-     cssmin: {
-        dist: {
-         files: {
-          '<%= yeoman.dist %>/styles/main.css': [
-             '.tmp/styles/{,*/}*.css',
-             '<%= yeoman.app %>/styles/{,*/}*.css'
-           ]
-         }
-        }
-      },
+    // cssmin: {
+    //    dist: {
+    //     files: {
+    //      '<%= yeoman.dist %>/styles/main.css': [
+    //         '.tmp/styles/{,*/}*.css',
+    //         '<%= yeoman.app %>/styles/{,*/}*.css'
+    //       ]
+    //     }
+    //    }
+    //  },
     // uglify: {
     //   dist: {
     //     files: {
@@ -414,10 +414,10 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'jade',
+    'stylus',
     'bower-install',
     'useminPrepare',
     'concurrent:dist',
-    'stylus',
     'autoprefixer',
     'concat',
     'ngmin',
