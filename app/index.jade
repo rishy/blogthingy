@@ -15,16 +15,16 @@ html(class="no-js", lang="en")
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
     // Place favicon.ico and apple-touch-icon.png in the root directory
-    // build:css(app) styles/vendor.css
-    // bower:css(app)
-    // endbower
-    // endbuild
-    // build:css({.tmp,app}) styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
-    // endbuild
-    // build:css(.tmp) styles/stylus/reset.css
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    link(rel="stylesheet" href="styles/main.css")
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/stylus/reset.css -->
     link(rel='stylesheet', href='styles/stylus/reset.css')
-    // endbuild
+    <!-- endbuild -->
   body(ng-app='myProjectsApp')
     <!--[if lt IE 7]>
     p.browsehappy
@@ -48,16 +48,18 @@ html(class="no-js", lang="en")
     script(src='bower_components/es5-shim/es5-shim.js')
     script(src='bower_components/json3/lib/json3.min.js')
     <![endif] -->
-    // build:js(app) scripts/vendor.js
-    // bower:js(app)
-    script(src='bower_components/angular/angular.js')
-    script(src='bower_components/angular-resource/angular-resource.js')
-    script(src='bower_components/angular-cookies/angular-cookies.js')
-    script(src='bower_components/angular-sanitize/angular-sanitize.js')
-    script(src='bower_components/angular-route/angular-route.js')
-    // endbower
-    // endbuild
-    // build:js({.tmp,app}) scripts/scripts.js
-    script(src='scripts/app.js')
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    script(src='scripts/app.js') 
     script(src='scripts/controllers/main.js')
-    // endbuild
+    <!-- endbuild -->
