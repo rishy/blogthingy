@@ -52,6 +52,22 @@ module.exports = {
   // By default, Sails sets its environment using the `NODE_ENV` environment variable.
   // If NODE_ENV is not set, Sails will run in the 'development' environment.
 
-  environment: process.env.NODE_ENV || 'development'
+  environment: process.env.NODE_ENV || 'development',
+
+  adapters: {
+    'default': 'mongo',
+
+    //sails v.0.9.0
+    mongo: {
+      module  : 'sails-mongo',
+      host    : 'localhost',
+      port    : 27017,
+      user    : '',
+      password: '',
+      database: 'mydb',
+
+      schema  : true
+    }
+  }
 
 };
