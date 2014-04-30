@@ -3,4 +3,3 @@
 
 1. cd into angular directory and run "grunt build" - This will populate sails assets 
 2. cd .. and run sails lift
-
