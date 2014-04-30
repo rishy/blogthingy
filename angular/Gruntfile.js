@@ -1,4 +1,4 @@
-// Generated on 2014-02-17 using generator-angular 0.7.1
+// Generated on 2014-04-29 using generator-angular 0.7.1
 'use strict';
 
 // # Globbing
@@ -22,11 +22,19 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: '../assets/'
+      dist: '../assets'
     },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+      jade: {
+        files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        tasks: ['jade']
+      },
+      styles: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.styl'],
+        tasks: ['stylus','newer:copy:styles', 'autoprefixer']
+      },
       coffee: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['newer:coffee:dist']
@@ -35,16 +43,8 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.{coffee,litcoffee,coffee.md}'],
         tasks: ['newer:coffee:test', 'karma']
       },
-      styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css', '<%= yeoman.app %>/styles/{,*/}*.styl'],
-        tasks: ['stylus','newer:copy:styles', 'autoprefixer']
-      },      
       gruntfile: {
         files: ['Gruntfile.js']
-      },
-      jade: {
-        files: ['<%= yeoman.app %>/{,*/}*.jade'],
-        tasks: ['jade']
       },
       livereload: {
         options: {
@@ -93,20 +93,20 @@ module.exports = function (grunt) {
       }
     },
 
-    //converts jade files to html
+    //convert jade files to html files
     jade: {
-      compile: {
-       options: {
-       data: {}
-     },
-       files: [{
-        expand: true,
-        cwd:'<%= yeoman.app %>',
-        src: ['*.jade', 'views/{,*/}*.jade'],
-        dest: '.tmp',
-        ext: '.html'
-      }]
-     }
+      dist: {
+        options: {
+            pretty: true
+        },
+        files: [{
+            expand: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '.tmp',
+            src: ['*.jade', 'views/{,*/}*.jade'],
+            ext: '.html'
+        }]
+      }
     },
 
     //converts stylus files to css
@@ -119,7 +119,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['styles/stylus/*.styl'],
+          src: ['styles/*.styl'],
           dest: '.tmp',
           ext: '.css'   
         }]
@@ -140,13 +140,16 @@ module.exports = function (grunt) {
     // Empties folders to start fresh
     clean: {
       dist: {
+        options: {
+          force: true
+        },
         files: [{
           dot: true,
           src: [
             '.tmp',
             '<%= yeoman.dist %>/*',
             '!<%= yeoman.dist %>/.git*',
-            '!<%= yeoman.dist %>/js'
+            '!<%= yeoman.dist %>/js'           
           ]
         }]
       },
@@ -223,7 +226,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: 'app/index.jade',
+      html: '.tmp/index.html',
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -269,7 +272,7 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '.tmp',
+          cwd: '<%= yeoman.dist %>',
           src: ['*.html', 'views/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
@@ -318,6 +321,11 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/',
+          dest: '<%= yeoman.dist %>',
+          src: ['{,*/}*.js', '{,*/}*.css', '{,*/}*.html']
         }]
       },
       styles: {
@@ -331,9 +339,7 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'jade',        
         'coffee:dist',
-        'stylus',
         'copy:styles'
       ],
       test: [
@@ -352,15 +358,15 @@ module.exports = function (grunt) {
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
     // cssmin: {
-    //    dist: {
+    //   dist: {
     //     files: {
-    //      '<%= yeoman.dist %>/styles/main.css': [
+    //       '<%= yeoman.dist %>/styles/main.css': [
     //         '.tmp/styles/{,*/}*.css',
     //         '<%= yeoman.app %>/styles/{,*/}*.css'
     //       ]
     //     }
-    //    }
-    //  },
+    //   }
+    // },
     // uglify: {
     //   dist: {
     //     files: {
@@ -390,10 +396,12 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
-      'clean:server',
+      'clean:server',      
       'bower-install',
+      'jade',
+      'stylus',
       'concurrent:server',
-      'autoprefixer',
+      'autoprefixer',      
       'connect:livereload',
       'watch'
     ]);
@@ -413,19 +421,16 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean:dist',
-    'jade',
-    'stylus',
+    'clean:dist',    
     'bower-install',
     'useminPrepare',
-    'concurrent:dist',
+    'jade',
+    'stylus',
+    'concurrent:dist',    
     'autoprefixer',
-    'concat',
     'ngmin',
     'copy:dist',
     'cdnify',
-    'cssmin',
-    'uglify',
     'rev',
     'usemin',
     'htmlmin'

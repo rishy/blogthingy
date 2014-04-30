@@ -1,7 +1,8 @@
 node_modules
 .tmp
-assets/dist
-assets/.tmp
 .sass-cache
-assets/app/bower_components
-assets/node_modules
+assets/bower_components
+angular/node_modules
+angular/.tmp
+angular/.sass-cache
+angular/app/bower_components
