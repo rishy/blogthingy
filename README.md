@@ -1,2 +1,2 @@
 # sails+angular
-### a Sails application
+### An angularjs app which uses sailsjs for backend
