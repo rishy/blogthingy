@@ -12,4 +12,5 @@ angular/node_modules
 angular/.tmp
 angular/.sass-cache
 angular/app/bower_components
-!assets/bower_components/bootstrap/
+!assets/bower_components/bootstrap
+
