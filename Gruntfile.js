@@ -29,10 +29,15 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
+<<<<<<< HEAD
 
     'bower_components/bootstrap/dist/css/bootstrap.css',
     'styles/**/*.css' 
 
+=======
+    'bower_components/bootstrap/dist/css/bootstrap.css',
+    'styles/**/*.css'    
+>>>>>>> configured to add bootstrap dynamically
   ];
 
 
