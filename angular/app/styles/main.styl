@@ -1,11 +1,61 @@
+@font-face
+  src url('../fonts/UbuntuTitling-Bold.ttf')
+  font-family 'ubuntu-bold'
+
+@font-face
+  src url('../fonts/Ubuntu-L.ttf')
+  font-family 'ubuntu'
+
+ul 
+  list-style-type none
+  padding 0px
+  margin 0px
+
+body
+  font-family 'ubuntu-bold' !important
+
 header  
   font-size 100px
   background-color  #e7e7e7
   padding 60px 0px
   text-align center
   color #888
+  text-shadow -2px 0px 0px #747474
 
-section 
+/*--------sidebar styles-----------*/
+
+#sidebar
+  position fixed
+  top 300px
+  padding 20px
+  text-align center
+
+#sidebar, #name
+  font-size 17px
+
+#name
+  line-height 0.75
+  background-color #888
+  height 100px
+  width 100px
+  border-radius 100%
+  padding-top 46px
+  color #F1F1F1
+  margin 5px auto  
+
+#fries
+  font-size 15px
+  color #747474
+
+#sidebar nav li:hover
+  color #004152
+
+#sidebar #links li
+  display inline
+
+/*----------SIDEWAR STYLES END-------------*/
+
+#ondway
   text-align center
   font-size 40px
   line-height 2
@@ -18,21 +68,23 @@ section
 #follow 
   display inline
 
-section div
+#ondway div
   color #333
   font-size 35px
 
-section div img
+#ondway div img
   width 50px
 
-@media(max-width: 768px)
+@media (max-width: 768px)
 
   header
-    font-size 70px
-    padding 40px
+    font-size 50px
+    padding 30px
 
-  section
+  #ondway
     font-size 30px
   
-  section div
-    font-size 20px  
+  #ondway div
+    font-size 25px  
+
+

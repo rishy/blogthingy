@@ -11,5 +11,8 @@ angular.module('angularApp', [
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
+      .when '/ondway',
+        templateUrl: 'views/ondway.html'
+        controller: 'MainCtrl'
       .otherwise
         redirectTo: '/'
