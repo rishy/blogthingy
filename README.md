@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blogthingy
 ### An angularjs app which uses sailsjs for backend
 
