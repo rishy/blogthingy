@@ -30,11 +30,7 @@ module.exports = function (grunt) {
 
   var cssFilesToInject = [
     'bower_components/bootstrap/dist/css/bootstrap.css',
-<<<<<<< HEAD
     'styles/**/*.css' 
-=======
-    'styles/**/*.css'    
->>>>>>> origin/master
   ];
 
 
@@ -50,6 +46,15 @@ module.exports = function (grunt) {
 
     // Below, as a demonstration, you'll see the built-in dependencies 
     // linked in the proper order order  
+
+    //other js files
+    'bower_components/jquery/jquery.js',
+    'bower_components/angular/angular.js',
+    'bower_components/bootstrap/dist/js/bootstrap.js',
+    'bower_components/angular-resource/angular-resource.js',
+    'bower_components/angular-cookies/angular-cookies.js',
+    'bower_components/angular-sanitize/angular-sanitize.js',
+    'bower_components/angular-route/angular-route.js',
 
     //link the scripts files
     'scripts/**/*.js',
@@ -68,12 +73,7 @@ module.exports = function (grunt) {
 
     // A simpler boilerplate library for getting you up and running w/ an
     // automatic listener for incoming messages from Socket.io.
-<<<<<<< HEAD
     'js/app.js'
-
-=======
-    'js/app.js',
->>>>>>> origin/master
 
     // *->    put other dependencies here   <-*
 
