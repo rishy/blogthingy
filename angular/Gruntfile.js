@@ -286,7 +286,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '.tmp/concat/scripts',
-          src: '*.js',
+          src: '{,*/}*.js',
           dest: '.tmp/concat/scripts'
         }]
       }
@@ -324,7 +324,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/',
           dest: '<%= yeoman.dist %>',
-          src: ['{,*/}*.js', '{,*/}*.css', 'views/{,*/}*.html']
+          src: ['scripts/{,*/}*.js', 'styles/{,*/}*.css', 'views/{,*/}*.html']
         }]
       },
       styles: {
