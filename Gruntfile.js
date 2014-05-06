@@ -45,7 +45,7 @@ module.exports = function (grunt) {
   var jsFilesToInject = [
 
     // Below, as a demonstration, you'll see the built-in dependencies 
-    // linked in the proper order order
+    // linked in the proper order order  
 
     //link the scripts files
     'scripts/**/*.js',
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
 
     // A simpler boilerplate library for getting you up and running w/ an
     // automatic listener for incoming messages from Socket.io.
-    'js/app.js',
+    'js/app.js'
 
     // *->    put other dependencies here   <-*
 
@@ -239,6 +239,9 @@ module.exports = function (grunt) {
     },
 
     uglify: {
+      options: {
+        mangle: false
+      },
       dist: {
         src: ['.tmp/public/concat/production.js'],
         dest: '.tmp/public/min/production.js'
