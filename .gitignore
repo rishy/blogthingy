@@ -2,14 +2,7 @@
 node_modules
 .tmp
 .sass-cache
-assets/fonts
-assets/images/
-assets/scripts/
-assets/styles/
-assets/views/
 angular/node_modules
 angular/.tmp
 angular/.sass-cache
 angular/app/bower_components
-
-

@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
   var cssFilesToInject = [
     'bower_components/bootstrap/dist/css/bootstrap.css',
-    'styles/**/*.css' 
+    'styles/*.css' 
   ];
 
 
@@ -57,13 +57,8 @@ module.exports = function (grunt) {
     'bower_components/angular-route/angular-route.js',
 
     //link the scripts files
-    'scripts/**/*.js',
-
-    //link the scripts files
-    'scripts/**/*.js',
-
-    //link the scripts files
-    'scripts/**/*.js',
+    'scripts/*.js',
+    'scripts/controllers/*.js',
 
     // Bring in the socket.io client
     'js/socket.io.js',
