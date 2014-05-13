@@ -9,7 +9,7 @@ angular.module('angularApp', [
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
-        templateUrl: 'views/ondway.html'
+        templateUrl: 'views/main.html'
         controller: 'MainCtrl'
       .when '/ondway',
         templateUrl: 'views/ondway.html'
