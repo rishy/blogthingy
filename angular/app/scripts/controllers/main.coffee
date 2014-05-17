@@ -13,6 +13,8 @@ angular.module('angularApp')
       sidebar.setAttribute('class', 'fixedMenu')     
      else
       sidebar.setAttribute('class', '') 
+
+    
    ]
 
 

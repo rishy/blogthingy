@@ -11,11 +11,17 @@ ul
   padding 0px
   margin 0px
 
-body
-  font-family 'ubuntu-bold' !important
-  height 200%
+a:hover
+  text-decoration none
+  color #004152 !important
 
-header  
+a
+  color #333333
+
+body
+  font-family 'ubuntu-bold' !important  
+
+#mainHead  
   font-size 100px
   background-color  #e7e7e7
   padding 5% 0%
@@ -57,9 +63,9 @@ header
   color #747474
 
 #sidebar nav li:hover
-  color #004152
+  color #004152 !important
 
-#sidebar #links li
+#sidebar #links li, #networks li
   display inline
 
 .fixedMenu
@@ -84,18 +90,174 @@ header
   color #333
   font-size 35px
 
-
 #follow img
   width 50px
   margin-left 10px
 
+/*------------------------------------Profile Page-----------------------------------*/
+
+#profileWrapper
+  padding 20px 60px
+
+#profileWrapper header  
+  border-bottom 1px solid #DDDDDD
+  padding 20px 0px
+  width 100%
+  display inline-block
+
+#pic
+  height 150px
+  width 150px
+  border-radius 5px
+  background-color #777
+  float left
+
+#pic img
+  height 100%
+  width 100%
+  border-radius 5px
+
+#intro
+  float left
+  margin-left 75px
+  
+
+#intro p:first-child
+  font-size 70px
+  margin 0
+
+#intro p:last-child
+  font-size 25px
+  color #777  
+  font-family 'ubuntu'
+
+#networks
+  float right
+  margin-top 120px
+
+#networks li
+  margin-left 10px
+
+#details  
+  font-size 20px
+  padding 30px 60px 30px 60px
+  font-family ubuntu
+  text-align justify
+  position relative
+
+#back2home  
+  height 75px
+  width 75px
+  margin 0 auto
+
+
+#back2home img
+  height 100%
+  width 100%
+
+/*---------------------------Media Queries-------------------------*/
+
+@media (max-width: 1024px) and (min-width: 768px)
+
+  #profileWrapper 
+    padding 15px 40px 
+    
+  #profileWrapper header
+    padding 15px 0px
+
+  #pic
+    height 125px
+    width 125px
+    border-radius 4px
+
+  #pic img
+    border-radius 4px
+
+  #intro
+    margin-left 40px
+    line-height 1.6
+    
+  #intro p:first-child
+    font-size 50px
+
+  #intro p:last-child
+    font-size 18px
+
+  #networks
+    margin-top 100px
+
+  #networks li
+    margin-left 3px
+
+  #networks li img
+    height 28px
+    width 28px
+
+  #details
+    font-size 18px
+    padding 20px 40px
+
+  #back2home 
+    height 60px
+    width 60px
+
 @media (max-width: 768px)
 
-  header
+  #mainHead
     font-size 60px
     padding 30px
 
   #ondway
     font-size 25px
 
+  #profileWrapper 
+    padding 10px 20px 
+    
+  #profileWrapper header
+    padding 10px 0px
 
+  #pic
+    height 100px
+    width 100px
+    border-radius 3px
+    float none
+    margin auto
+
+  #pic img
+    border-radius 3px
+
+  #intro
+    margin-left 30px
+    line-height 1.4
+    text-align center
+    float none
+    margin 0 auto
+    
+  #intro p:first-child
+    font-size 30px
+
+  #intro p:last-child
+    font-size 15px
+
+  #networks
+    margin-top 0px
+    float none
+    display flex
+
+  #networks ul
+    margin 0 auto
+
+  #networks li
+    margin-left 2px
+
+  #networks li img
+    height 24px
+    width 24px
+
+  #details
+    font-size 15px
+    padding 15px 20px
+
+  #back2home 
+    height 45px
+    width 45px

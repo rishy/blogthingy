@@ -11,8 +11,11 @@ angular.module('angularApp', [
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
+      .when '/profile',
+        templateUrl: 'views/profile.html'
+        controller: 'MainCtrl'
       .when '/ondway',
         templateUrl: 'views/ondway.html'
-        controller: 'MainCtrl'
+        controller: 'MainCtrl'      
       .otherwise
         redirectTo: '/'
