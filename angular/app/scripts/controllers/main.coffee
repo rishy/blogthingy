@@ -12,9 +12,7 @@ angular.module('angularApp')
      if scrollTop >= hHeight      
       sidebar.setAttribute('class', 'fixedMenu')     
      else
-      sidebar.setAttribute('class', '') 
-
-    
+      sidebar.setAttribute('class', '')     
    ]
 
 

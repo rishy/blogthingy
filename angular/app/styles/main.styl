@@ -20,6 +20,9 @@ a
 
 body
   font-family 'ubuntu-bold' !important  
+  height 200%
+
+/*--------------------Stream Page-------------------*/
 
 #mainHead  
   font-size 100px
@@ -29,12 +32,41 @@ body
   color #888
   text-shadow -2px 0px 0px #747474
 
+#wrapper section
+  float right
+  margin-left 275px
+  margin-right 50px
+  padding 40px 20px 20px 20px
+  
+#wrapper section article
+  width 100%
+  font-family 'ubuntu'
+  
+#wrapper section article header
+  display inline-block
+  width 100%
+  border-bottom 1px solid #ccc
+  
+#wrapper section article header h1
+  float left
+  font-family 'ubuntu-bold'
+  
+#wrapper section article header p
+  float right
+  margin-top 25px
+  font-size 18px
+
+#wrapper section article div
+  padding 10px
+  font-size 18px
+
+/*------------------Stream page ENDS----------------*/
+
 /*--------sidebar styles-----------*/
 
 #sidebar
-  position relative
-  top 20px
-  width 300px
+  position absolute
+  margin-top 40px
   padding 20px
   text-align center
 
@@ -65,11 +97,19 @@ body
 #sidebar nav li:hover
   color #004152 !important
 
-#sidebar #links li, #networks li
+.networks li
   display inline
+
+#sidebar .networks
+    margin-top 10px
+    float none
+
+#sidebar .networks li 
+  margin-left 0
 
 .fixedMenu
   position fixed !important
+  top 20px
 
 /*----------SIDEBAR STYLES END-------------*/
 
@@ -131,11 +171,11 @@ body
   color #777  
   font-family 'ubuntu'
 
-#networks
+.networks
   float right
   margin-top 120px
 
-#networks li
+.networks li
   margin-left 10px
 
 #details  
@@ -155,9 +195,15 @@ body
   height 100%
   width 100%
 
+/*---------------------------Profile page ENDS---------------------*/
+
 /*---------------------------Media Queries-------------------------*/
 
 @media (max-width: 1024px) and (min-width: 768px)
+
+  #mainHead
+    font-size 80px
+    padding 20px
 
   #profileWrapper 
     padding 15px 40px 
@@ -183,13 +229,13 @@ body
   #intro p:last-child
     font-size 18px
 
-  #networks
+  .networks
     margin-top 100px
 
-  #networks li
+  .networks li
     margin-left 3px
 
-  #networks li img
+  .networks li img
     height 28px
     width 28px
 
@@ -201,11 +247,43 @@ body
     height 60px
     width 60px
 
+  #sidebar
+    position absolute !important
+    margin-top 30px
+    padding 15px
+    font-size 14px
+
+  #name
+    height 80px
+    width 80px
+    padding-top 38px
+    font-size 14px
+
+  #fries
+    font-size 13px
+
+  #wrapper section
+    margin-left 225px
+    margin-right 20px
+
+  #wrapper section article header h1
+    font-size 175%
+
+  #wrapper section article header p
+    margin-top 23px
+    font-size 16px
+
+  #wrapper section article div
+    font-size 16px
+
 @media (max-width: 768px)
 
   #mainHead
-    font-size 60px
-    padding 30px
+    display none
+
+  #sidebar
+    position relative !important
+    margin-top 0    
 
   #ondway
     font-size 25px
@@ -239,18 +317,18 @@ body
   #intro p:last-child
     font-size 15px
 
-  #networks
+  .networks
     margin-top 0px
     float none
     display flex
 
-  #networks ul
+  .networks ul
     margin 0 auto
 
-  #networks li
+  .networks li
     margin-left 2px
 
-  #networks li img
+  .networks li img
     height 24px
     width 24px
 
@@ -261,3 +339,20 @@ body
   #back2home 
     height 45px
     width 45px
+
+  #wrapper section
+    float right
+    padding 30px 15px 15px 15px
+    margin 0
+
+  #wrapper section article header h1
+    font-size 200%
+    margin-top 0
+
+  #wrapper section article header p
+    font-size 16px
+    float none
+    clear both
+
+  #wrapper section article div
+    font-size 16px
