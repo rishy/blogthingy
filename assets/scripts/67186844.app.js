@@ -2,7 +2,10 @@
   'use strict';
   angular.module('angularApp', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute']).config(function($routeProvider) {
     return $routeProvider.when('/', {
-      templateUrl: 'views/ondway.html',
+      templateUrl: 'views/main.html',
+      controller: 'MainCtrl'
+    }).when('/profile', {
+      templateUrl: 'views/profile.html',
       controller: 'MainCtrl'
     }).when('/ondway', {
       templateUrl: 'views/ondway.html',

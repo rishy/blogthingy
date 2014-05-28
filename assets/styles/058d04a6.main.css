@@ -1,0 +1,638 @@
+/* line 371 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/* line 2 : /home/rish/www/projects/blogthingy/angular/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+@font-face {
+  src: url("../fonts/UbuntuTitling-Bold.ttf");
+  font-family: 'ubuntu-bold';
+}
+
+/* line 5 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+@font-face {
+  src: url("../fonts/Ubuntu-L.ttf");
+  font-family: 'ubuntu';
+}
+
+/* line 9 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 14 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+a:hover {
+  text-decoration: none;
+  color: #004152 !important;
+}
+
+/* line 18 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+a {
+  color: #333;
+}
+
+/* line 21 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.links {
+  border-bottom: 1px dashed #004152;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/* line 26 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.links:hover {
+  border-bottom: 0px dashed #004152;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/* line 31 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+body {
+  font-family: 'ubuntu-bold' !important;
+}
+
+/* line 34 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*--------------------Stream Page-------------------*/
+
+/* line 36 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#mainHead {
+  font-size: 100px;
+  background-color: #f3f3f3;
+  padding: 5% 0%;
+  text-align: center;
+  color: #929292;
+  text-shadow: -2px 0px 0px #808080;
+}
+
+/* line 44 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section {
+  float: right;
+  margin-left: 275px;
+  margin-right: 50px;
+  padding: 40px 20px 20px 20px;
+}
+
+/* line 50 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section article {
+  width: 100%;
+  font-family: 'ubuntu';
+}
+
+/* line 54 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section article header {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 59 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section article header h1 {
+  float: left;
+  font-family: 'ubuntu-bold';
+  color: #575757;
+}
+
+/* line 64 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section article header p {
+  float: right;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/* line 69 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wrapper section article div {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* line 73 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*------------------Stream page ENDS----------------*/
+
+/* line 75 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*--------sidebar styles-----------*/
+
+/* line 77 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#sidebar {
+  position: absolute;
+  margin-top: 40px;
+  padding: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* line 84 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#sidebar,
+#name {
+  font-size: 17px;
+}
+
+/* line 87 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#name {
+  line-height: 0.75;
+  background-color: #888;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  padding-top: 46px;
+  color: #f1f1f1;
+  margin: 5px auto;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/* line 99 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#name:hover {
+  border-radius: 3px;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/* line 104 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#fries {
+  font-size: 15px;
+  color: #747474;
+}
+
+/* line 108 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#sidebar nav li:hover {
+  color: #004152 !important;
+}
+
+/* line 111 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.networks li {
+  display: inline;
+}
+
+/* line 114 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#sidebar .networks {
+  margin-top: 10px;
+  float: none;
+}
+
+/* line 118 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#sidebar .networks li {
+  margin-left: 0;
+}
+
+/* line 121 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.fixedMenu {
+  position: fixed !important;
+  top: 20px;
+}
+
+/* line 125 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*----------SIDEBAR STYLES END-------------*/
+
+/* line 127 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#ondway {
+  text-align: center;
+  font-size: 40px;
+  line-height: 2;
+  padding-top: 20px;
+}
+
+/* line 133 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#wait {
+  position: relative;
+  color: #636262;
+}
+
+/* line 137 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#follow {
+  display: inline;
+}
+
+/* line 140 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#ondway div {
+  color: #333;
+  font-size: 35px;
+}
+
+/* line 144 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#follow img {
+  width: 50px;
+  margin-left: 10px;
+}
+
+/* line 148 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*------------------------------------Profile Page-----------------------------------*/
+
+/* line 150 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#profileWrapper {
+  padding: 20px 60px;
+}
+
+/* line 153 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#profileWrapper header {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0px;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 159 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#pic {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #777;
+  float: left;
+}
+
+/* line 166 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#pic img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* line 171 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#intro {
+  float: left;
+  margin-left: 75px;
+}
+
+/* line 176 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#intro p:first-child {
+  font-size: 70px;
+  margin: 0;
+}
+
+/* line 180 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#intro p:last-child {
+  font-size: 25px;
+  color: #777;
+  font-family: 'ubuntu';
+}
+
+/* line 185 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.networks {
+  float: right;
+  margin-top: 120px;
+}
+
+/* line 189 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+.networks li {
+  margin-left: 10px;
+}
+
+/* line 192 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#details {
+  font-size: 18px;
+  padding: 30px 60px 30px 60px;
+  font-family: ubuntu;
+  text-align: justify;
+  position: relative;
+}
+
+/* line 199 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#back2home {
+  height: 75px;
+  width: 75px;
+  margin: 0 auto;
+}
+
+/* line 205 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+#back2home img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 209 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*---------------------------Profile page ENDS---------------------*/
+
+/* line 211 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+/*---------------------------Media Queries-------------------------*/
+
+/* line 213 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  /* line 215 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #mainHead {
+    font-size: 80px;
+    padding: 20px;
+  }
+
+  /* line 219 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #profileWrapper {
+    padding: 15px 40px;
+  }
+
+  /* line 222 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #profileWrapper header {
+    padding: 15px 0px;
+  }
+
+  /* line 225 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #pic {
+    height: 125px;
+    width: 125px;
+    border-radius: 4px;
+  }
+
+  /* line 230 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #pic img {
+    border-radius: 4px;
+  }
+
+  /* line 233 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro {
+    margin-left: 40px;
+    line-height: 1.6;
+  }
+
+  /* line 237 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro p:first-child {
+    font-size: 50px;
+  }
+
+  /* line 240 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro p:last-child {
+    font-size: 18px;
+  }
+
+  /* line 243 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks {
+    margin-top: 100px;
+  }
+
+  /* line 246 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks li {
+    margin-left: 3px;
+  }
+
+  /* line 249 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks li img {
+    height: 28px;
+    width: 28px;
+  }
+
+  /* line 253 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #details {
+    font-size: 16px;
+    padding: 20px 40px;
+  }
+
+  /* line 257 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #back2home {
+    height: 60px;
+    width: 60px;
+  }
+
+  /* line 261 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #sidebar {
+    position: absolute !important;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* line 267 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #name {
+    height: 80px;
+    width: 80px;
+    padding-top: 38px;
+    font-size: 14px;
+  }
+
+  /* line 273 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #fries {
+    font-size: 13px;
+  }
+
+  /* line 276 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section {
+    margin-left: 225px;
+    margin-right: 20px;
+  }
+
+  /* line 280 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article header h1 {
+    font-size: 175%;
+  }
+
+  /* line 283 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article header p {
+    margin-top: 23px;
+    font-size: 16px;
+  }
+
+  /* line 287 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article div {
+    font-size: 16px;
+  }
+}
+
+/* line 290 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+@media (max-width: 768px) {
+  /* line 292 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #mainHead {
+    display: none;
+  }
+
+  /* line 295 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #sidebar {
+    position: relative !important;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  /* line 300 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #ondway {
+    font-size: 25px;
+  }
+
+  /* line 303 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #profileWrapper {
+    padding: 10px 20px;
+  }
+
+  /* line 306 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #profileWrapper header {
+    padding: 10px 0px;
+  }
+
+  /* line 309 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 3px;
+    float: none;
+    margin: auto;
+  }
+
+  /* line 316 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #pic img {
+    border-radius: 3px;
+  }
+
+  /* line 319 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro {
+    margin-left: 30px;
+    line-height: 1.4;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+  }
+
+  /* line 326 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro p:first-child {
+    font-size: 30px;
+  }
+
+  /* line 329 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #intro p:last-child {
+    font-size: 16px;
+  }
+
+  /* line 332 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks {
+    margin-top: 0px;
+    float: none;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  /* line 337 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks ul {
+    margin: 0 auto;
+  }
+
+  /* line 340 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks li {
+    margin-left: 2px;
+  }
+
+  /* line 343 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  .networks li img {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* line 347 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #details {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  /* line 351 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #back2home {
+    height: 45px;
+    width: 45px;
+  }
+
+  /* line 355 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section {
+    float: right;
+    padding: 30px 15px 15px 15px;
+    margin: 0;
+  }
+
+  /* line 360 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article header h1 {
+    font-size: 200%;
+    margin-top: 0;
+  }
+
+  /* line 364 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article header p {
+    font-size: 16px;
+    float: none;
+    clear: both;
+  }
+
+  /* line 369 : /home/rish/www/projects/blogthingy/angular/app/styles/main.styl */
+
+  #wrapper section article div {
+    font-size: 16px;
+  }
+}
