@@ -21,6 +21,7 @@ html.no-js
     //
        build:css({.tmp,app}) styles/main.css
     link(rel='stylesheet', href='styles/main.css')
+    link(rel='stylesheet', href='styles/vanillaMain.css')
     //
           endbuild
 
@@ -34,7 +35,36 @@ html.no-js
         | to improve your experience.
     //
        Add your site or application content here
-    div(ng-view='')
+    header(id="mainHead" ng-hide='profileActive')
+      span Web.log()
+
+    div(id='sidebar' my-scroll-directive)
+      div(id='name' ng-mouseenter="myCssVar='hoverActive'" ng-mouseleave="myCssVar=''")
+        a(href='/#/profile') 
+          p(ng-class='myCssVar') Rishabh Shukla
+      p(id='fries') I like french fries and computers
+
+      nav
+        ul        
+          li 
+            a(href='/#/main') Stream
+
+      div(class='networks')
+        ul
+          li 
+            a(href='https://github.com/rishy' target='_blank')
+              img(src='images/github.png')
+          li
+            a(href='https://plus.google.com/+Rishabhshukla13/posts' target='_blank')
+              img(src='images/twitter.png')
+          li
+            a(href='https://twitter.com/0_rishabh' target='_blank')
+              img(src='images/gplus.png')
+
+    
+    section(id='wrapper')
+      div.view-container  
+        div(ng-view='' class='view-frame')
     //
        Google Analytics: change UA-XXXXX-X to be your site's ID
     script.
@@ -58,6 +88,7 @@ html.no-js
     script(src='bower_components/angular-cookies/angular-cookies.js')
     script(src='bower_components/angular-sanitize/angular-sanitize.js')
     script(src='bower_components/angular-route/angular-route.js')
+    script(src='bower_components/angular-animate/angular-animate.js')
     //
        endbower
     //
@@ -65,6 +96,7 @@ html.no-js
     //
        build:js({.tmp,app}) scripts/scripts.js    
     script(src='scripts/app.js')
-    script(src='scripts/controllers/main.js')    
+    script(src='scripts/controllers/main.js')
+    script(src='scripts/directives/myscrolldirective.js')    
     //
        endbuild
