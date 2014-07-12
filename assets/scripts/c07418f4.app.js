@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('angularApp', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute']).config(function($routeProvider) {
+  angular.module('angularApp', ['ngCookies', 'ngResource', 'ngSanitize', 'ngRoute', 'myDirectives', 'ngAnimate']).config(function($routeProvider) {
     return $routeProvider.when('/', {
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'

@@ -6,4 +6,26 @@
       a(href='http://browsehappy.com/') upgrade your browser
       | to improve your experience.
     --><!--Add your site or application content here 
-    --><div ng-view=""></div>
+    --><header id="mainHead" ng-hide="profileActive"><span>Web.log()</span></header>
+    <div id="sidebar" my-scroll-directive="my-scroll-directive">
+      <div id="name" ng-mouseenter="myCssVar='hoverActive'" ng-mouseleave="myCssVar=''"><a href="/#/profile">
+          <p ng-class="myCssVar">Rishabh Shukla</p></a></div>
+      <p id="fries">I like french fries and computers</p>
+      <nav>
+        <ul>       
+          <li><a href="/#/main">Stream</a></li>
+        </ul>
+      </nav>
+      <div class="networks">
+        <ul>
+          <li><a href="https://github.com/rishy" target="_blank"><img src="images/aa919d92.github.png"/></a></li>
+          <li><a href="https://plus.google.com/+Rishabhshukla13/posts" target="_blank"><img src="images/a2587211.twitter.png"/></a></li>
+          <li><a href="https://twitter.com/0_rishabh" target="_blank"><img src="images/c6b9b2cb.gplus.png"/></a></li>
+        </ul>
+      </div>
+    </div>
+    <section id="wrapper">
+      <div class="view-container"> 
+        <div ng-view="" class="view-frame"></div>
+      </div>
+    </section>
